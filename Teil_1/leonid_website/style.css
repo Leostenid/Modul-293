@@ -32,6 +32,24 @@ h1 {
   max-width: 80vw;
 }
 
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(rgb(208, 208, 208), white);
+  padding: 20px 0;
+  width: 100%;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: gray;
+  size: inherit;
+}
+nav a:hover {
+  background-color: rgb(230, 230, 230);
+}
+
 @media (max-width: 1000px) {
   .Beschreibung {
     font-size: 14px;
