@@ -1,0 +1,33 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100dvw;
+}
+h1 {
+  text-align: center;
+}
+.bild {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5dvh auto;
+}
+.Beschreibung {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+@media (max-width: 1000px) {
+  #Sade {
+    max-width: 60%;
+    height: auto;
+  }
+}
