@@ -4,6 +4,12 @@ body {
   padding: 0;
   margin: 0 auto;
   max-width: 100dvw;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body ::-webkit-scrollbar {
+  display: none;
 }
 h1 {
   text-align: center;
@@ -16,6 +22,7 @@ h1 {
   margin: 5dvh auto;
 }
 .Beschreibung {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +33,9 @@ h1 {
 }
 
 @media (max-width: 1000px) {
+  .Beschreibung {
+    font-size: 14px;
+  }
   #Sade {
     max-width: 60%;
     height: auto;
