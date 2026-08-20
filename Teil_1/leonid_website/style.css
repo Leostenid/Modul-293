@@ -22,12 +22,16 @@ body {
 h1 {
   text-align: center;
 }
+p {
+  text-align: center;
+  margin: 0px;
+}
 .bild {
   display: flex;
-  align-content: center;
   align-items: center;
   justify-content: center;
   margin: 5dvh auto;
+  margin-bottom: 10px;
 }
 .Beschreibung {
   font-size: 20px;
