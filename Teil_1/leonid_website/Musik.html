@@ -10,21 +10,39 @@
     <header>
       <nav class="Websites">
         <a href="index.html">Hauptmenü</a>
-        <a href="Musik.html">Musik</a>
-        <a href="Erfolge.html">Erfolg</a>
+        <a href="musik.html">Musik</a>
+        <a href="erfolge.html">Erfolg</a>
         <a href="discografie.html">Discografie</a>
       </nav>
     </header>
     <main>
-      <h1>Sade</h1>
+      <h1>Musik</h1>
       <p class="Beschreibung">
-        Sade Adu ist eine britisch-nigerianische Sängerin und die Frontfrau der
-        nach ihr benannten Band Sade. Sie wurde in den 1980er-Jahren mit
-        Welthits wie „Smooth Operator“ bekannt und prägte mit ihrer ruhigen,
-        samtigen Stimme den Soul und Jazz-Pop. Bis heute gilt sie als eine der
-        erfolgreichsten und stilprägendsten Künstlerinnen Grossbritanniens.
+        Sade ist eine berühmte britische Band mit der Sängerin Sade Adu. Ihre
+        Musik ist eine Mischung aus Smooth Jazz, Soul, Pop und R&B. Der Sound
+        ist sehr ruhig, entspannt und elegant. Die Stimme der Sängerin klingt
+        tief, warm und unverwechselbar. In den Texten geht es meistens um Liebe,
+        Sehnsucht und Gefühle. Die Musik entstand in den 1980er-Jahren und ist
+        bis heute zeitlos. Viele Menschen hören ihre Lieder gerne zum
+        Entspannen. Ein wichtiges Instrument in ihren Songs ist das Saxofon. Ihr
+        bekanntestes und beliebtes Lied ist „Smooth Operator“ aus dem Jahr 1984.
+        <button id="ZumSong">Zum Song</button>
+
+        <!--Den Script habe ich kopiert-->
+        <script>
+          document.getElementById("ZumSong").addEventListener("click", () => {
+            window.open(
+              "https://www.youtube.com/watch?v=4TYv2PhG89A",
+              "_blank",
+              "noopener,noreferrer",
+            );
+          });
+        </script>
+        Auch Songs wie „No Ordinary Love“ oder „By Your Side“ sind weltbekannt.
+        Sade hat viele Millionen Alben verkauft und mehrere Grammys gewonnen.
+        Obwohl sie nur wenige Alben veröffentlicht hat, hat sie viele treue
+        Fans.
       </p>
-      <button class="ZumSong">Zum Song</button>
       <form>
         <label for="Lieblingslied">Was ist dein Lieblingslied? </label>
         <input type="text" id="Lieblingslied" name="Lieblingslied" />
