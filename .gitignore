@@ -1,0 +1,8 @@
+
+# Sensitive Apache configuration and credential files
+.htaccess
+.htpasswd
+
+# Microsoft Word and Excel documents
+*.docx
+*.xlsx
