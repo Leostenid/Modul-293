@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Geschützter Bereich"
-AuthUserFile /srv/vhosts/inf-293-25i-m293user18.iet-gibb.net/tmp/.htpasswd
-Require valid-user
