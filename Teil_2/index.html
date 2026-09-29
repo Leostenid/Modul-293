@@ -1,390 +1,370 @@
 <!doctype html>
-<html>
-  <head>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Michroma", sans-serif;
-      }
-      .w3-row-padding img {
-        margin-bottom: 12px;
-      }
-      /* Set the width of the sidebar to 120px */
-      .w3-sidebar {
-        width: 120px;
-        background: #222;
-      }
-      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-      #main {
-        margin-left: 120px;
-      }
-      /* Remove margins from "page content" on small screens */
-      @media only screen and (max-width: 600px) {
-        #main {
-          margin-left: 0;
-        }
-      }
-    </style>
-  </head>
-  <body class="w3-black">
-    <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-      <!-- Avatar image in top left corner -->
-      <img
-        src="https://imgs.search.brave.com/BEsVhtm3AZ-f5nOCyli2fLWVOwZr2Ve38kscwC64tc8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L3RodW1ibmFpbC9h/d2Vzb21lLWZseWlu/Zy1jYXItOWJsYWU0/dmdqenM2ZnNtcC5n/aWY.gif"
-        style="width: 100%"
-      />
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fa fa-home w3-xxlarge"></i>
-        <p>HOME</p>
+<html lang="en">
+  <title>W3.CSS Travel Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", Arial, Helvetica, sans-serif;
+    }
+  </style>
+
+  <body class="w3-light-grey">
+    <!-- Navigation Bar -->
+    <nav class="w3-flex w3-white w3-border-bottom w3-xlarge">
+      <a href="#" class="w3-button w3-text-red w3-hover-red">
+        <b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b>
       </a>
+
       <a
-        href="#about"
-        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+        href="#"
+        class="w3-button w3-hover-red w3-text-grey"
+        style="margin-left: auto"
       >
-        <i class="fa fa-user w3-xxlarge"></i>
-        <p>ABOUT</p>
-      </a>
-      <a
-        href="#photos"
-        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
-      >
-        <i class="fa fa-eye w3-xxlarge"></i>
-        <p>PHOTOS</p>
-      </a>
-      <a
-        href="#contact"
-        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
-      >
-        <i class="fa fa-envelope w3-xxlarge"></i>
-        <p>CONTACT</p>
+        <i class="fa fa-search"></i>
       </a>
     </nav>
 
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-      <div
-        class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
-      >
-        <a href="#" class="w3-bar-item w3-button" style="width: 25% !important"
-          >HOME</a
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-hide-small"
+      style="max-width: 1500px"
+    >
+      <img
+        src="/w3images/london2.jpg"
+        alt="London"
+        style="width: 100%"
+        width="1500"
+        height="700"
+      />
+
+      <div class="w3-display-middle" style="width: 65%">
+        <div class="w3-flex w3-black">
+          <button
+            class="w3-button tablink w3-red"
+            onclick="openLink(event, 'Flight')"
+          >
+            <i class="fa fa-plane w3-margin-right"></i>Flight
+          </button>
+
+          <button class="w3-button tablink" onclick="openLink(event, 'Hotel')">
+            <i class="fa fa-bed w3-margin-right"></i>Hotel
+          </button>
+
+          <button class="w3-button tablink" onclick="openLink(event, 'Car')">
+            <i class="fa fa-car w3-margin-right"></i>Rental
+          </button>
+        </div>
+
+        <!-- Tabs -->
+        <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+          <h3>Travel the world with us</h3>
+
+          <div
+            class="w3-grid"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+              gap: 16px;
+            "
+          >
+            <div>
+              <label>From</label>
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Departing from"
+              />
+            </div>
+
+            <div>
+              <label>To</label>
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Arriving at"
+              />
+            </div>
+          </div>
+
+          <p>
+            <button class="w3-button w3-dark-grey">
+              Search and find dates
+            </button>
+          </p>
+        </div>
+
+        <div
+          id="Hotel"
+          class="w3-container w3-white w3-padding-16 myLink"
+          hidden
         >
-        <a
-          href="#about"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important"
-          >ABOUT</a
-        >
-        <a
-          href="#photos"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important"
-          >PHOTOS</a
-        >
-        <a
-          href="#contact"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important"
-          >CONTACT</a
-        >
+          <h3>Find the best hotels</h3>
+          <p>Book a hotel with us and get the best fares and promotions.</p>
+          <p>We know hotels - we know comfort.</p>
+
+          <p>
+            <button class="w3-button w3-dark-grey">Search Hotels</button>
+          </p>
+        </div>
+
+        <div id="Car" class="w3-container w3-white w3-padding-16 myLink" hidden>
+          <h3>Best car rental in the world!</h3>
+
+          <p>
+            <span class="w3-tag w3-deep-orange">DISCOUNT!</span>
+            Special offer if you book today: 25% off anywhere in the world with
+            CarServiceRentalRUs
+          </p>
+
+          <input
+            class="w3-input w3-border"
+            type="text"
+            placeholder="Pick-up point"
+          />
+
+          <p>
+            <button class="w3-button w3-dark-grey">Search Availability</button>
+          </p>
+        </div>
       </div>
-    </div>
+    </header>
 
     <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-      <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo">
-          <span class="w3-hide-small">I'm</span> John Doe.
-        </h1>
-        <p>Photographer and Web Designer.</p>
-        <img
-          src="/w3images/man_smoke.jpg"
-          alt="boy"
-          class="w3-image"
-          width="992"
-          height="1108"
-        />
-      </header>
+    <main class="w3-content" style="max-width: 1100px">
+      <!-- Good Offers -->
+      <section class="w3-container w3-margin-top">
+        <h3>Good Offers Right Now</h3>
+        <h6>Up to <b>50%</b> discount.</h6>
+      </section>
 
-      <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">My Name</h2>
-        <hr style="width: 200px" class="w3-opacity" />
-        <p>
-          Some text about me. Some text about me. I am lorem ipsum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-        <p class="w3-wide">Python</p>
-        <div class="w3-white">
-          <div class="w3-dark-grey" style="height: 28px; width: 1%"></div>
-        </div>
-        <p class="w3-wide">HTML</p>
-        <div class="w3-white">
-          <div class="w3-dark-grey" style="height: 28px; width: 0.4%"></div>
-        </div>
-        <p class="w3-wide">Holy C</p>
-        <div class="w3-white">
-          <div class="w3-dark-grey" style="height: 28px; width: 100%"></div>
-        </div>
-        <br />
-
-        <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">0</span><br />
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">0</span><br />
-            Operating Systems Created
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">0</span><br />
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">0</span><br />
-            Stars on Github
-          </div>
+      <div
+        class="w3-grid w3-padding w3-text-white w3-large"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 16px;
+        "
+      >
+        <div class="w3-display-container">
+          <img
+            src="/w3images/cinqueterre.jpg"
+            alt="Cinque Terre"
+            style="width: 100%"
+          />
+          <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
         </div>
 
-        <button class="w3-button w3-light-grey w3-padding-large w3-section">
-          <i class="fa fa-download"></i> Download Resume
-        </button>
-
-        <!-- Grid for pricing tables -->
-        <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-        <div class="w3-row-padding" style="margin: 0 -16px">
-          <div class="w3-half w3-margin-bottom">
-            <ul
-              class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off"
-            >
-              <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-              <li class="w3-padding-16">Web Design</li>
-              <li class="w3-padding-16">Photography</li>
-              <li class="w3-padding-16">5GB Storage</li>
-              <li class="w3-padding-16">Mail Support</li>
-              <li class="w3-padding-16">
-                <h2>$ 10</h2>
-                <span class="w3-opacity">per month</span>
-              </li>
-              <li class="w3-light-grey w3-padding-24">
-                <button
-                  class="w3-button w3-white w3-padding-large w3-hover-black"
-                >
-                  Sign Up
-                </button>
-              </li>
-            </ul>
+        <div class="w3-grid" style="grid-template-columns: 1fr 1fr; gap: 16px">
+          <div class="w3-display-container">
+            <img
+              src="/w3images/newyork2.jpg"
+              alt="New York"
+              style="width: 100%"
+            />
+            <span class="w3-display-bottomleft w3-padding">New York</span>
           </div>
 
-          <div class="w3-half">
-            <ul
-              class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off"
-            >
-              <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-              <li class="w3-padding-16">Web Design</li>
-              <li class="w3-padding-16">Photography</li>
-              <li class="w3-padding-16">50GB Storage</li>
-              <li class="w3-padding-16">Endless Support</li>
-              <li class="w3-padding-16">
-                <h2>$ 25</h2>
-                <span class="w3-opacity">per month</span>
-              </li>
-              <li class="w3-light-grey w3-padding-24">
-                <button
-                  class="w3-button w3-white w3-padding-large w3-hover-black"
-                >
-                  Sign Up
-                </button>
-              </li>
-            </ul>
+          <div class="w3-display-container">
+            <img
+              src="/w3images/sanfran.jpg"
+              alt="San Francisco"
+              style="width: 100%"
+            />
+            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
           </div>
-          <!-- End Grid/Pricing tables -->
+
+          <div class="w3-display-container">
+            <img src="/w3images/pisa.jpg" alt="Pisa" style="width: 100%" />
+            <span class="w3-display-bottomleft w3-padding">Pisa</span>
+          </div>
+
+          <div class="w3-display-container">
+            <img src="/w3images/paris.jpg" alt="Paris" style="width: 100%" />
+            <span class="w3-display-bottomleft w3-padding">Paris</span>
+          </div>
         </div>
-
-        <!-- Testimonials -->
-        <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>
-        <img
-          src="/w3images/bandmember.jpg"
-          alt="Avatar"
-          class="w3-left w3-circle w3-margin-right"
-          style="width: 80px"
-        />
-        <p>
-          <span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty
-          Schools.
-        </p>
-        <p>John Doe saved us from a web disaster.</p>
-        <br />
-
-        <img
-          src="/w3images/avatar_g2.jpg"
-          alt="Avatar"
-          class="w3-left w3-circle w3-margin-right"
-          style="width: 80px"
-        />
-        <p>
-          <span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at
-          Company.
-        </p>
-        <p>No one is better than John Doe.</p>
-        <!-- End About Section -->
       </div>
 
-      <!-- Portfolio Section -->
-      <div class="w3-padding-64 w3-content" id="photos">
-        <h2 class="w3-text-light-grey">My Photos</h2>
-        <hr style="width: 200px" class="w3-opacity" />
+      <!-- Explore Nature -->
+      <section class="w3-container">
+        <h3>Explore Nature</h3>
+        <p>Travel with us and see nature at its finest.</p>
+      </section>
 
-        <!-- Grid for photos -->
-        <div class="w3-row-padding" style="margin: 0 -16px">
-          <div class="w3-half">
-            <img src="/w3images/wedding.jpg" style="width: 100%" />
-            <img src="/w3images/rocks.jpg" style="width: 100%" />
-            <img src="/w3images/sailboat.jpg" style="width: 100%" />
-          </div>
+      <div
+        class="w3-grid w3-padding"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 16px;
+        "
+      >
+        <article>
+          <img
+            src="/w3images/ocean2.jpg"
+            alt="West Coast, Norway"
+            style="width: 100%"
+          />
 
-          <div class="w3-half">
-            <img src="/w3images/underwater.jpg" style="width: 100%" />
-            <img src="/w3images/chef.jpg" style="width: 100%" />
-            <img src="/w3images/wedding.jpg" style="width: 100%" />
-            <img src="/w3images/p6.jpg" style="width: 100%" />
+          <div class="w3-container w3-white">
+            <h3>West Coast, Norway</h3>
+            <p class="w3-opacity">Roundtrip from $79</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-margin-bottom">Buy Tickets</button>
           </div>
-          <!-- End photo grid -->
-        </div>
-        <!-- End Portfolio Section -->
+        </article>
+
+        <article>
+          <img
+            src="/w3images/mountains2.jpg"
+            alt="Mountains, Austria"
+            style="width: 100%"
+          />
+
+          <div class="w3-container w3-white">
+            <h3>Mountains, Austria</h3>
+            <p class="w3-opacity">One-way from $39</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+          </div>
+        </article>
       </div>
 
-      <!-- Contact Section -->
-      <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-        <h2 class="w3-text-light-grey">Contact Me</h2>
-        <hr style="width: 200px" class="w3-opacity" />
+      <!-- Newsletter -->
+      <section class="w3-container">
+        <div
+          class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off"
+        >
+          <h2>Get the best offers first!</h2>
+          <p>Join our newsletter.</p>
 
-        <div class="w3-section">
-          <p>
-            <i
-              class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"
-            ></i>
-            Chicago, US
-          </p>
-          <p>
-            <i
-              class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"
-            ></i>
-            Phone: +00 151515
-          </p>
-          <p>
-            <i
-              class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"
-            >
-            </i>
-            Email: mail@mail.com
-          </p>
+          <label>Email</label>
+
+          <input
+            class="w3-input w3-border"
+            type="email"
+            placeholder="Your email address"
+          />
+
+          <button type="button" class="w3-button w3-red w3-margin-top">
+            Subscribe
+          </button>
         </div>
-        <br />
-        <p>Let's get in touch. Send me a message:</p>
+      </section>
+
+      <!-- Contact -->
+      <section class="w3-container">
+        <h2>Contact</h2>
+        <p>Let us book your next trip!</p>
+
+        <p>
+          <i class="fa fa-map-marker" style="width: 30px"></i>
+          Chicago, US
+        </p>
+
+        <p>
+          <i class="fa fa-phone" style="width: 30px"></i>
+          Phone: +00 151515
+        </p>
+
+        <p>
+          <i class="fa fa-envelope" style="width: 30px"></i>
+          Email: mail@mail.com
+        </p>
 
         <form action="/action_page.php" target="_blank">
           <p>
             <input
-              class="w3-input w3-padding-16"
+              class="w3-input w3-padding-16 w3-border"
               type="text"
               placeholder="Name"
               required
               name="Name"
             />
           </p>
+
           <p>
             <input
-              class="w3-input w3-padding-16"
-              type="text"
+              class="w3-input w3-padding-16 w3-border"
+              type="email"
               placeholder="Email"
               required
               name="Email"
             />
           </p>
+
           <p>
             <input
-              class="w3-input w3-padding-16"
-              type="text"
-              placeholder="Subject"
-              required
-              name="Subject"
-            />
-          </p>
-          <p>
-            <input
-              class="w3-input w3-padding-16"
+              class="w3-input w3-padding-16 w3-border"
               type="text"
               placeholder="Message"
               required
               name="Message"
             />
           </p>
+
           <p>
-            <button
-              class="w3-button w3-light-grey w3-padding-large"
-              type="submit"
-            >
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            <button class="w3-button w3-black w3-padding-large" type="submit">
+              SEND MESSAGE
             </button>
           </p>
         </form>
-        <!-- End Contact Section -->
-      </div>
+      </section>
+    </main>
 
-      <!-- Footer -->
-      <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <!-- Footer -->
+    <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+      <h5>Find Us On</h5>
+
+      <div class="w3-xlarge w3-padding-16">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
         <i class="fa fa-snapchat w3-hover-opacity"></i>
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-medium">
-          Powered by
-          <a
-            href="https://www.w3schools.com/w3css/default.asp"
-            target="_blank"
-            class="w3-hover-text-green"
-            >w3.css</a
-          >
-        </p>
-        <!-- End footer -->
-      </footer>
+      </div>
 
-      <!-- END PAGE CONTENT -->
-    </div>
+      <p>
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          target="_blank"
+          class="w3-hover-text-green"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      const tabs = document.querySelectorAll(".myLink");
+      const tabButtons = document.querySelectorAll(".tablink");
+
+      function openLink(event, linkName) {
+        tabs.forEach((tab) => {
+          tab.hidden = true;
+        });
+
+        tabButtons.forEach((button) => {
+          button.classList.remove("w3-red");
+        });
+
+        document.getElementById(linkName).hidden = false;
+        event.currentTarget.classList.add("w3-red");
+      }
+    </script>
   </body>
 </html>
