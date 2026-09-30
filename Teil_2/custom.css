@@ -1,0 +1,7 @@
+:root {
+  --dark-blue: rgb(3, 0, 21) !important;
+}
+
+.w3-black {
+  background-color: var(--dark-blue) !important;
+}
