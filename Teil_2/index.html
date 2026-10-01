@@ -27,12 +27,14 @@
 
   <body class="w3-black">
     <!-- Navigation Bar -->
-    <nav class="w3-flex w3-black w3-xlarge">
+    <div class="w3-flex w3-black w3-xlarge">
       <a href="#" class="w3-button w3-hover-white">
-        <b
-          ><i class="fa fa-map-marker w3-margin-right font-color"></i
-          >Südfrankreich</b
+        <button
+          onclick="document.getElementById('id01').style.display = 'block'"
+          class="w3-button w3-theme w3-hover-white"
         >
+          <i class="fa fa-map-marker w3-margin-right"></i>Südfrankreich
+        </button>
       </a>
 
       <a
@@ -41,7 +43,7 @@
         style="margin-left: auto"
       >
       </a>
-    </nav>
+    </div>
 
     <!-- Header -->
     <header
@@ -58,7 +60,7 @@
       />
 
       <!-- Ich möchte das zu einem Modal machen-->
-      <div class="w3-display-middle w3-modal" style="width: 65%">
+      <div id="id01" class="w3-display-middle w3-modal" style="width: 65%">
         <div class="w3-flex w3-black">
           <button
             class="w3-button tablink w3-red"
@@ -70,6 +72,11 @@
           <button class="w3-button tablink" onclick="openLink(event, 'Hotel')">
             <i class="fa fa-bed w3-margin-right"></i>Hotel
           </button>
+          <span
+            onclick="document.getElementById('id01').style.display = 'none'"
+            class="w3-button w3-display-topright"
+            ><i class="fa fa-remove"></i
+          ></span>
 
           <button class="w3-button tablink" onclick="openLink(event, 'Car')">
             <i class="fa fa-car w3-margin-right"></i>Rental
