@@ -66,15 +66,15 @@
             class="w3-button tablink w3-red"
             onclick="openLink(event, 'Flight')"
           >
-            <i class="fa fa-plane w3-margin-right"></i>Flight
+            <i class="fa fa-map-marker w3-margin-right"></i>Karte
           </button>
 
           <button class="w3-button tablink" onclick="openLink(event, 'Hotel')">
-            <i class="fa fa-bed w3-margin-right"></i>Hotel
+            <i class="fa fa-plane w3-margin-right"></i>Flüge
           </button>
 
           <button class="w3-button tablink" onclick="openLink(event, 'Car')">
-            <i class="fa fa-car w3-margin-right"></i>Rental
+            <i class="fa fa-bed w3-margin-right"></i>Hotel
           </button>
           <span
             onclick="document.getElementById('id01').style.display = 'none'"
@@ -85,40 +85,23 @@
         </div>
 
         <!-- Tabs -->
-        <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
-          <h3>Travel the world with us</h3>
+        <div id="FLight" class="w3-container w3-white w3-padding-16">
+          <h3>Entdecke die Region</h3>
 
+          <iframe
+            id="myIframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462144.24500181526!2d6.014519764990488!3d43.37491147275206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cebc738732d97f%3A0x594966412c5651c0!2zQ8O0dGUgZOKAmUF6dXIsIEZyYW5rcmVpY2g!5e0!3m2!1sde!2sch!4v1790854204337!5m2!1sde!2sch"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
           <div
             class="w3-grid"
             style="
               grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
               gap: 16px;
             "
-          >
-            <div>
-              <label>From</label>
-              <input
-                class="w3-input w3-border"
-                type="text"
-                placeholder="Departing from"
-              />
-            </div>
-
-            <div>
-              <label>To</label>
-              <input
-                class="w3-input w3-border"
-                type="text"
-                placeholder="Arriving at"
-              />
-            </div>
-          </div>
-
-          <p>
-            <button class="w3-button w3-dark-grey">
-              Search and find dates
-            </button>
-          </p>
+          ></div>
         </div>
 
         <div
