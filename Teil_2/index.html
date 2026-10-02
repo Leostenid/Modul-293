@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <title>W3.CSS Travel Template</title>
+  <title>Südfrankreich</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
   <link rel="stylesheet" href="custom.css" />
@@ -28,18 +28,10 @@
   <body class="w3-black">
     <!-- Navigation Bar -->
     <div class="w3-flex w3-black w3-xlarge">
-      <a href="#" class="w3-button w3-hover-white">
+      <a class="w3-button w3-hover-white">
         <button id="myBtn" class="w3-button w3-theme w3-hover-white">
           <i class="fa fa-map-marker w3-margin-right"></i>Südfrankreich
         </button>
-      </a>
-      <!--onclick="document.getElementById('myModal').style.display = 'block'" -->
-
-      <a
-        href="#"
-        class="w3-button w3-hover-white w3-text-grey"
-        style="margin-left: auto"
-      >
       </a>
       <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -117,11 +109,12 @@
         </div>
 
         <!-- Tabs -->
-        <div id="Karte" class="w3-container w3-white w3-padding-16">
+        <div id="Karte" class="w3-container w3-white w3-padding-16 myLink">
           <h3>Entdecke die Region</h3>
 
           <iframe
             id="myIframe"
+            class="w3-div"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462144.24500181526!2d6.014519764990488!3d43.37491147275206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cebc738732d97f%3A0x594966412c5651c0!2zQ8O0dGUgZOKAmUF6dXIsIEZyYW5rcmVpY2g!5e0!3m2!1sde!2sch!4v1790854204337!5m2!1sde!2sch"
             allowfullscreen=""
             loading="lazy"
@@ -136,14 +129,20 @@
           ></div>
         </div>
 
-        <div id="Flüge" class="w3-div w3-white w3-padding-16 myLink" hidden>
-          <h3>Find the best hotels</h3>
-          <p>Book a hotel with us and get the best fares and promotions.</p>
-          <p>We know hotels - we know comfort.</p>
-
-          <p>
-            <button class="w3-button w3-dark-grey">Search Hotels</button>
-          </p>
+        <div
+          id="Flüge"
+          class="w3-container w3-div w3-white w3-padding-16 myLink"
+          hidden
+        >
+          <h3>Möchten sie in die Côte d'Azur Region Fliegen?</h3>
+          <button
+            onclick="
+              window.open('//www.google.com/travel/flights?to=NCE', '_blank')
+            "
+            class="w3-button w3-dark-gray"
+          >
+            Verfügbare Flüge nach Nizza
+          </button>
         </div>
 
         <div
@@ -151,23 +150,23 @@
           class="w3-container w3-white w3-padding-16 myLink"
           hidden
         >
-          <h3>Best car rental in the world!</h3>
+          <h3>Finde Hotels in Südfrankreich</h3>
+          <p>Buchen sie ein Hotel direkt auf Booking.com</p>
 
           <p>
-            <span class="w3-tag w3-deep-orange">DISCOUNT!</span>
-            Special offer if you book today: 25% off anywhere in the world with
-            CarServiceRentalRUs
+            <button id="Booking" class="w3-button w3-dark-grey">
+              Hotels Finden
+            </button>
           </p>
-
-          <input
-            class="w3-input w3-border"
-            type="text"
-            placeholder="Pick-up point"
-          />
-
-          <p>
-            <button class="w3-button w3-dark-grey">Search Availability</button>
-          </p>
+          <script>
+            document.getElementById("Booking").addEventListener("click", () => {
+              window.open(
+                "https://www.booking.com/searchresults.html?ss=French-Riviera",
+                "_blank",
+                "noopener,noreferrer",
+              );
+            });
+          </script>
         </div>
       </div>
     </header>
