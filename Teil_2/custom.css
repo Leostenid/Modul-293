@@ -64,8 +64,8 @@ iframe {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  background-color: lightgray;
+  color: black;
 }
 
 .modal-body {
@@ -74,7 +74,7 @@ iframe {
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: lightgray;
   color: black;
 }
 
