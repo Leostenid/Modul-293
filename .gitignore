@@ -5,3 +5,6 @@
 # Microsoft Word and Excel documents
 *.docx
 *.xlsx
+
+# Iphone
+*.heic
