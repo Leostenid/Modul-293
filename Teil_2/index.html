@@ -12,6 +12,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+  <script src="script.js"></script>
 
   <style>
     body,
@@ -28,16 +29,20 @@
   <body class="w3-black">
     <!-- Navigation Bar -->
     <div class="w3-flex w3-black w3-xlarge">
-      <a class="w3-button w3-hover-white">
-        <button id="myBtn" class="w3-button w3-theme w3-hover-white">
-          <i class="fa fa-map-marker w3-margin-right"></i>Südfrankreich
-        </button>
-      </a>
-      <div id="myModal" class="modal">
+      <button
+        id="myBtn"
+        type="button"
+        class="w3-button w3-theme w3-hover-white"
+        aria-label="Südfrankreich öffnen"
+      >
+        <i class="fa fa-map-marker w3-margin-right"></i>Südfrankreich
+      </button>
+
+      <div id="myModal" class="modal" aria-hidden="true" role="dialog">
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
+            <span class="close" aria-label="Schließen">&times;</span>
             <h2>Modal Header</h2>
           </div>
           <div class="modal-body">
@@ -51,31 +56,35 @@
       </div>
     </div>
     <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
+      const modal = document.getElementById("myModal");
+      const btn = document.getElementById("myBtn");
+      const closeButton = document.querySelector(".close");
 
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
+      function openModal() {
+        if (!modal) return;
         modal.style.display = "block";
-      };
+        modal.setAttribute("aria-hidden", "false");
+      }
 
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
+      function closeModal() {
+        if (!modal) return;
         modal.style.display = "none";
-      };
+        modal.setAttribute("aria-hidden", "true");
+      }
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+      if (btn) {
+        btn.addEventListener("click", openModal);
+      }
+
+      if (closeButton) {
+        closeButton.addEventListener("click", closeModal);
+      }
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
         }
-      };
+      });
     </script>
 
     <!-- Header -->
@@ -225,7 +234,7 @@
 
       <!-- Explore Nature -->
       <section class="w3-container">
-        <h3>Entdecken sie die einzigartige Natur der Provence</h3>
+        <h3>Entdecken sie Strände der Provence</h3>
         <p>Travel with us and see nature at its finest.</p>
       </section>
 
@@ -239,61 +248,91 @@
         <article>
           <img
             src="./img/Strand.png"
-            alt="Plage Pampelonne, St. Tropez"
+            alt="Plage de Pampelonne, St. Tropez"
             style="width: 100%"
           />
 
           <div class="w3-container w3-white">
-            <h3>Plage Pampelonne, St. Tropez</h3>
-            <p class="w3-opacity">Roundtrip from $79</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+            <h3>Plage de Pampelonne, St. Tropez</h3>
+            <p class="w3-opacity">ca. 10 Fahrminuten von St. Tropez.</p>
+            <p>
+              Der Plage de Pampelonne ist ein endlos langer, hellgoldener
+              Sandstrand direkt bei Saint-Tropez. Hier trifft entspanntes
+              Meerweh auf schicke Beachclubs und echtes Riviera-Flair.
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://maps.google.com/?q=Plage+de+Pampelonne',
+                  '_blank',
+                )
+              "
+              class="w3-button w3-margin-bottom"
+            >
+              Zum Strand
+            </button>
           </div>
         </article>
 
         <article>
           <img
-            src="./img/Palme.png"
-            alt="Palmen, St.Maxime"
+            src="./img/Strandnacht.png"
+            alt="Plage de Nartelle, St.Maxime"
             style="width: 100%"
           />
 
           <div class="w3-container w3-white">
-            <h3>Palmen bei Abenddämmerung, St.Maxime</h3>
-            <p class="w3-opacity">One-way from $39</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+            <h3>Plage de Nartelle, St.Maxime</h3>
+            <p class="w3-opacity">ca. 5 Fahrminuten von St.Maxime</p>
+            <p>
+              Der Plage de la Nartelle ist ein traumhafter, weicher Sandstrand
+              direkt bei Sainte-Maxime. Hier trifft entspannte
+              Familienatmosphäre auf kristallklares Wasser und gemütlichen
+              Sommergenuss.
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://maps.google.com/?q=Plage+de+la+Nartelle',
+                  '_blank',
+                )
+              "
+              class="w3-button w3-margin-bottom"
+            >
+              Zum Strand
+            </button>
           </div>
         </article>
       </div>
 
       <!-- Contact -->
       <section class="w3-container">
-        <h2>Contact</h2>
-        <p>Let us book your next trip!</p>
+        <h2>Fehlt deine Traumdestination?</h2>
+        <p>Kontaktiere uns hier:</p>
 
         <p>
           <i class="fa fa-map-marker" style="width: 30px"></i>
-          Chicago, US
+          Bern, CH
         </p>
 
         <p>
           <i class="fa fa-phone" style="width: 30px"></i>
-          Phone: +00 151515
+          Phone: +41 79 123 45 67
         </p>
 
         <p>
           <i class="fa fa-envelope" style="width: 30px"></i>
-          Email: mail@mail.com
+          Email: max.mustermann@gmail.com
         </p>
 
-        <form action="/action_page.php" target="_blank">
+        <form id="contactForm" action="#" method="post">
           <p>
             <input
               class="w3-input w3-padding-16 w3-border"
               type="text"
-              placeholder="Name"
+              placeholder="name"
               required
+              id="nameInput"
               name="Name"
             />
           </p>
@@ -302,8 +341,9 @@
             <input
               class="w3-input w3-padding-16 w3-border"
               type="email"
-              placeholder="Email"
+              placeholder="email"
               required
+              id="emailInput"
               name="Email"
             />
           </p>
@@ -314,6 +354,7 @@
               type="text"
               placeholder="Message"
               required
+              id="messageInput"
               name="Message"
             />
           </p>
@@ -355,17 +396,25 @@
       const tabs = document.querySelectorAll(".myLink");
       const tabButtons = document.querySelectorAll(".tablink");
 
+      tabButtons.forEach((button) => {
+        button.setAttribute("aria-selected", "false");
+      });
+
+      if (tabButtons.length > 0) {
+        tabButtons[0].classList.add("w3-white");
+        tabButtons[0].setAttribute("aria-selected", "true");
+      }
+
       function openLink(event, linkName) {
         tabs.forEach((tab) => {
-          tab.hidden = true;
+          tab.hidden = tab.id !== linkName;
         });
 
         tabButtons.forEach((button) => {
-          button.classList.remove("w3-white");
+          const isActive = button === event.currentTarget;
+          button.classList.toggle("w3-white", isActive);
+          button.setAttribute("aria-selected", String(isActive));
         });
-
-        document.getElementById(linkName).hidden = false;
-        event.currentTarget.classList.add("w3-white");
       }
     </script>
   </body>
