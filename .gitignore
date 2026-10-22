@@ -8,3 +8,9 @@
 
 # Iphone
 *.heic
+
+# VS Code
+.vscode
+
+# Webstorm
+.idea
