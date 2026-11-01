@@ -7,12 +7,12 @@
 }
 
 .theme-garage {
-  --navy-blue: #26262a; /* Surface */
-  --gray: #f8f6f0; /* Surface */
-  --black: #18181a; /* Hintergrund */
-  --brown: #8b0000; /* Accent */
-  --white: #ffffff; /* Text */
-  --highlight: #c93b3b; /* Hover */
+  --navy-blue: #26262a;
+  --gray: #f8f6f0;
+  --black: #18181a;
+  --brown: #8b0000;
+  --white: #ffffff;
+  --highlight: #c93b3b;
 }
 
 * {
@@ -471,6 +471,17 @@ td {
   font-size: 0.85rem;
   border-top: 1px solid var(--navy-blue);
 }
+.theme-btn {
+  background: none;
+  background-color: var(--brown);
+  border: hidden;
+  color: var(--white);
+  padding: 4px 10px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
 /* Desktop */
 
@@ -535,16 +546,5 @@ td {
 
   .fuss-inhalt {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .theme-btn {
-    background: none;
-    background-color: var(--brown);
-    border: hidden;
-    color: var(--white);
-    padding: 4px 10px;
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    font-size: 1rem;
   }
 }
