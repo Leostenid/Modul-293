@@ -1,9 +1,167 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geschichte</title>
+    <meta
+      name="description"
+      content="Die Geschichte der Garage Moser: von der Quartierwerkstatt 1962 zur Oldtimer-Ausstellung."
+    />
+    <title>Geschichte – Garage Moser</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="geschichte.html" class="aktiv">Geschichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="seitentitel">
+        <div class="behaelter">
+          <h1>Unsere Geschichte</h1>
+          <p>
+            Aus einer kleinen Quartierwerkstatt ist in drei Generationen eine
+            Ausstellung geworden.
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter zwei-spalten oben">
+          <div>
+            <h2>Von der Werkstatt zur Ausstellung</h2>
+            <p>
+              Hans Moser eröffnete 1962 seine Garage an der Werkstrasse. Er
+              reparierte, was damals auf der Strasse fuhr, vor allem Volkswagen
+              und Citroën.
+            </p>
+            <p>
+              Als 1978 niemand mehr einen alten Citroën Traction Avant wollte,
+              kaufte er ihn selbst. Das war der Anfang der Sammlung. Immer öfter
+              kamen Leute vorbei, die nur schauen wollten. Seit 2008 gibt es
+              deshalb die Ausstellung mit festen Öffnungszeiten.
+            </p>
+          </div>
+          <img
+            src="img/Garage.jpg"
+            alt="Alte Garage mit einem Oldtimer in der Einfahrt"
+          />
+        </div>
+      </section>
+
+      <section class="abschnitt grau">
+        <div class="behaelter">
+          <h2>Die wichtigsten Jahre</h2>
+          <ul class="zeitstrahl">
+            <li>
+              <strong>1962</strong>
+              Hans Moser eröffnet die Garage an der Werkstrasse in Bern.
+            </li>
+            <li>
+              <strong>1978</strong>
+              Er kauft seinen ersten Oldtimer, einen Citroën Traction Avant von
+              1951.
+            </li>
+            <li>
+              <strong>1994</strong>
+              Sohn Peter übernimmt und spezialisiert die Werkstatt auf Oldtimer.
+            </li>
+            <li>
+              <strong>2008</strong>
+              Die Halle wird umgebaut und öffnet als Ausstellung für Besucher.
+            </li>
+            <li>
+              <strong>2019</strong>
+              Daniel Moser übernimmt den Betrieb in dritter Generation.
+            </li>
+            <li>
+              <strong>2024</strong>
+              Die Halle wird auf 600 Quadratmeter erweitert, die Sammlung
+              umfasst jetzt 30 Fahrzeuge.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Das Team</h2>
+          <div class="spalten">
+            <div class="box">
+              <h3>Daniel Moser</h3>
+              <p>
+                Inhaber und Restaurator. Er kümmert sich um die Sammlung und
+                entscheidet, welche Autos dazukommen.
+              </p>
+            </div>
+            <div class="box">
+              <h3>Marco Keller</h3>
+              <p>
+                Mechaniker seit 2011. Er ist der Spezialist für Motoren und
+                Vergaser.
+              </p>
+            </div>
+            <div class="box">
+              <h3>Sandra Frei</h3>
+              <p>
+                Leitet die Führungen und betreut die Ausstellung. Sie kennt die
+                Geschichte jedes Fahrzeugs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>

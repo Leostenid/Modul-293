@@ -1,9 +1,245 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katalog</title>
+    <meta
+      name="description"
+      content="Die Exponate der Oldtimer-Ausstellung der Garage Moser mit Baujahr, Herkunft und Leistung."
+    />
+    <title>Ausstellung – Garage Moser</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="katalog.html" class="aktiv">Ausstellung</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="seitentitel">
+        <div class="behaelter">
+          <h1>Die Ausstellung</h1>
+          <p>
+            Unsere Halle zeigt Fahrzeuge aus fünf Jahrzehnten. Alle Autos sind
+            fahrbereit, und die meisten wurden in unserer eigenen Werkstatt
+            restauriert.
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Öffnungszeiten und Eintritt</h2>
+          <div class="spalten">
+            <div class="box">
+              <h3>Öffnungszeiten</h3>
+              <p>
+                Dienstag bis Sonntag<br />10.00–17.00 Uhr<br />Montag
+                geschlossen
+              </p>
+            </div>
+            <div class="box">
+              <h3>Eintritt</h3>
+              <p>
+                Erwachsene: CHF 14<br />Lernende, Studierende, AHV: CHF 10<br />Kinder
+                bis 16 Jahre: gratis
+              </p>
+            </div>
+            <div class="box">
+              <h3>Führung</h3>
+              <p>
+                Jeden Samstag um 14.00 Uhr, Dauer etwa eine Stunde. Zusätzlich
+                zum Eintritt CHF 8, Gruppen auf Anfrage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt grau">
+        <div class="behaelter">
+          <h2>Ausgewählte Exponate</h2>
+          <div class="spalten">
+            <article class="karte">
+              <img src="img/porsche.jpg" alt="Porsche 911" />
+              <div class="karte-text">
+                <h3>Porsche 911 Carrera RS</h3>
+                <p class="daten">Deutschland, 6 Zylinder, 260 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/mustang.jpg" alt="Ford Mustang" />
+              <div class="karte-text">
+                <h3>Ford Mustang Hardtop Coupe</h3>
+                <p class="daten">USA, 8 Zylinder, 200 PS</p>
+                <p class="etikett">Zu verkaufen</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/mercedes.jpg" alt="Mercedes-Benz" />
+              <div class="karte-text">
+                <h3>Mercedes-Benz 230 SL</h3>
+                <p class="daten">Deutschland, 6 Zylinder, 150 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/bmw.jpg" alt="BMW M3" />
+              <div class="karte-text">
+                <h3>BMW M3 E30</h3>
+                <p class="daten">Deutschland, 6 Zylinder, 170 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/ferrari.jpg" alt="Ferrari Testarossa" />
+              <div class="karte-text">
+                <h3>Ferrari Testarossa</h3>
+                <p class="daten">Italien, 12 Zylinder, 390 PS</p>
+                <p class="etikett">In Restauration</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/chevrolet.jpg" alt="Chevrolet" />
+              <div class="karte-text">
+                <h3>Chevrolet Impala SS / Caprice Coupe</h3>
+                <p class="daten">USA, 8 Zylinder, 325 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Unsere Fahrzeuge im Überblick</h2>
+          <p>
+            Ein Auszug aus unserer Sammlung. Fahrzeuge mit dem Status «Zu
+            verkaufen» können Sie nach Absprache probefahren.
+          </p>
+          <div class="tabelle-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fahrzeug</th>
+                  <th>Baujahr</th>
+                  <th>Herkunft</th>
+                  <th>Leistung</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Porsche 911 Carrera RS</td>
+                  <td>1992</td>
+                  <td>Deutschland</td>
+                  <td>260 PS</td>
+                  <td>Ausgestellt</td>
+                </tr>
+                <tr>
+                  <td>Ford Mustang Hardtop Coupe</td>
+                  <td>1965</td>
+                  <td>USA</td>
+                  <td>200 PS</td>
+                  <td>Zu verkaufen</td>
+                </tr>
+                <tr>
+                  <td>Mercedes-Benz 230 SL</td>
+                  <td>1965</td>
+                  <td>Deutschland</td>
+                  <td>150 PS</td>
+                  <td>Ausgestellt</td>
+                </tr>
+                <tr>
+                  <td>BMW M3 E30</td>
+                  <td>1987</td>
+                  <td>Deutschland</td>
+                  <td>170 PS</td>
+                  <td>Ausgestellt</td>
+                </tr>
+                <tr>
+                  <td>Ferrari Testarossa</td>
+                  <td>1985</td>
+                  <td>Italien</td>
+                  <td>390 PS</td>
+                  <td>In Restauration</td>
+                </tr>
+                <tr>
+                  <td>Chevrolet Impala SS / Caprice Coupe</td>
+                  <td>1966</td>
+                  <td>USA</td>
+                  <td>325 PS</td>
+                  <td>Ausgestellt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt braun">
+        <div class="behaelter mitte">
+          <h2>Interesse an einem Fahrzeug?</h2>
+          <p>
+            Schreiben Sie uns, welches Auto Sie interessiert. Wir melden uns
+            innerhalb von zwei Arbeitstagen.
+          </p>
+          <a href="kontakt.html" class="knopf hell">Anfrage senden</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>

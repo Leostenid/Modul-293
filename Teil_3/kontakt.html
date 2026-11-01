@@ -1,9 +1,154 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt</title>
+    <meta
+      name="description"
+      content="Kontakt zur Garage Moser in Bern: Führung buchen, Fragen zur Ausstellung oder Werkstatttermin."
+    />
+    <title>Kontakt – Garage Moser</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="kontakt.html" class="aktiv">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="seitentitel">
+        <div class="behaelter">
+          <h1>Kontakt</h1>
+          <p>
+            Sie möchten eine Führung buchen, haben eine Frage zur Ausstellung
+            oder brauchen einen Termin in der Werkstatt? Schreiben Sie uns.
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter zwei-spalten oben">
+          <form class="kontakt-formular" action="#" method="post">
+            <h2>Nachricht senden</h2>
+
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" minlength="2" required />
+
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="telefon">Telefon (freiwillig)</label>
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              pattern="[0-9 +]{9,16}"
+              title="Nur Ziffern, Leerzeichen und +, mindestens 9 Zeichen"
+            />
+
+            <label for="anliegen">Anliegen *</label>
+            <select id="anliegen" name="anliegen" required>
+              <option value="" disabled selected>Bitte wählen</option>
+              <option>Führung buchen</option>
+              <option>Gruppenbesuch</option>
+              <option>Frage zur Ausstellung</option>
+              <option>Termin in der Werkstatt</option>
+              <option>Interesse an einem Fahrzeug</option>
+            </select>
+
+            <label for="nachricht">Nachricht *</label>
+            <textarea
+              id="nachricht"
+              name="nachricht"
+              rows="6"
+              minlength="10"
+              required
+            ></textarea>
+
+            <label class="einverstanden">
+              <input type="checkbox" name="einverstanden" required />
+              Ich bin einverstanden, dass meine Angaben zur Beantwortung der
+              Anfrage verwendet werden. *
+            </label>
+
+            <button type="submit" class="knopf">Senden</button>
+            <p class="meldung" hidden></p>
+          </form>
+
+          <div>
+            <div class="box">
+              <h3>Adresse</h3>
+              <p>Garage Moser<br />Musterstrasse 1<br />3000 Bern</p>
+              <p>031 123 45 67<br />info@garage-moser.example</p>
+            </div>
+            <div class="box">
+              <h3>Öffnungszeiten</h3>
+              <p>
+                Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr,
+                8.00–12.00 und 13.30–17.30
+              </p>
+            </div>
+            <div class="box">
+              <h3>Anreise</h3>
+              <p>
+                Mit dem Bus bis Haltestelle Werkstrasse, danach zwei Minuten zu
+                Fuss. Parkplätze gibt es vor dem Haus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>

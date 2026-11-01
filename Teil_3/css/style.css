@@ -5,3 +5,546 @@
   --gray: #f8f6f0;
   --brown: #9a5b32;
 }
+
+.theme-garage {
+  --navy-blue: #26262a; /* Surface */
+  --gray: #f8f6f0; /* Surface */
+  --black: #18181a; /* Hintergrund */
+  --brown: #8b0000; /* Accent */
+  --white: #ffffff; /* Text */
+  --highlight: #c93b3b; /* Hover */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--brown);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.behaelter {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-schmal {
+  max-width: 700px;
+}
+
+.mitte {
+  text-align: center;
+}
+
+/* Header und Navigation */
+
+.kopf {
+  background-color: var(--navy-blue);
+  position: relative;
+}
+
+.kopf-inhalt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.menu-knopf {
+  font-size: 1rem;
+  padding: 0.4rem 0.9rem;
+  color: var(--white);
+  background-color: transparent;
+  border: hidden;
+  cursor: pointer;
+}
+
+.hauptnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--navy-blue);
+  border-top: 1px solid var(--brown);
+  z-index: 10;
+}
+
+.hauptnav.offen {
+  display: block;
+}
+
+.hauptnav a {
+  display: block;
+  padding: 0.9rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--black);
+}
+
+.hauptnav a:hover,
+.hauptnav a.aktiv {
+  background-color: var(--brown);
+}
+
+/* Hero (Startseite) */
+
+.hero {
+  padding: 3rem 0;
+  background: url("../img/hero.jpg") center / cover;
+}
+
+.hero-text {
+  max-width: 460px;
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--navy-blue);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+}
+
+/* Seitentitel (Unterseiten) */
+
+.seitentitel {
+  padding: 2.5rem 0;
+  background-color: var(--gray);
+  border-bottom: 4px solid var(--brown);
+}
+
+.seitentitel p {
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Abschnitte */
+
+.abschnitt {
+  padding: 3rem 0;
+}
+
+.grau {
+  background-color: var(--gray);
+}
+
+.braun {
+  color: var(--white);
+  background-color: var(--brown);
+}
+
+/* Knöpfe */
+
+.knopf {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--brown);
+  text-decoration: none;
+  border: 2px solid var(--brown);
+  cursor: pointer;
+}
+
+.knopf:hover {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.knopf.hell {
+  color: var(--black);
+  background-color: var(--white);
+  border-color: var(--white);
+}
+
+.knopf.hell:hover {
+  color: var(--white);
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+/* Spalten und Boxen */
+
+.spalten {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.box {
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--gray);
+  border-top: 4px solid var(--brown);
+}
+
+.spalten .box {
+  margin-bottom: 0;
+}
+
+.grau .box {
+  background-color: var(--white);
+}
+
+.zwei-spalten {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.zwei-spalten.oben {
+  align-items: start;
+}
+
+.zwei-spalten img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Fahrzeugkarten */
+
+.karte {
+  background-color: var(--white);
+  border: 1px solid #ddd;
+}
+
+.karte img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.karte-text {
+  padding: 1rem;
+}
+
+.daten {
+  margin-bottom: 0.5rem;
+}
+
+.etikett {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--brown);
+}
+
+/* Tabellen */
+
+.tabelle-box {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  color: var(--white);
+  background-color: var(--navy-blue);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--gray);
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zeitstrahl (Geschichte) */
+
+.zeitstrahl li {
+  padding: 0 0 1.5rem 1rem;
+  border-left: 3px solid var(--brown);
+}
+
+.zeitstrahl li:last-child {
+  padding-bottom: 0;
+}
+
+.zeitstrahl strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  color: var(--brown);
+}
+
+/* Galerie */
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.galerie button {
+  display: block;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.galerie img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.galerie button:hover img {
+  opacity: 0.8;
+}
+
+.grossbild {
+  max-width: 95vw;
+  padding: 0;
+  text-align: center;
+  background-color: var(--black);
+  border: none;
+}
+
+.grossbild::backdrop {
+  background-color: rgba(17, 24, 39, 0.85);
+}
+
+.grossbild img {
+  max-width: 90vw;
+  max-height: 75vh;
+  margin: 0 auto;
+}
+
+.schliessen {
+  margin: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--brown);
+  border: none;
+  cursor: pointer;
+}
+
+/* Kontaktformular */
+
+.kontakt-formular label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: bold;
+}
+
+.kontakt-formular input,
+.kontakt-formular select,
+.kontakt-formular textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #888;
+  background-color: var(--white);
+}
+
+.kontakt-formular input:focus,
+.kontakt-formular select:focus,
+.kontakt-formular textarea:focus {
+  outline: 2px solid var(--brown);
+}
+
+.kontakt-formular .einverstanden {
+  font-weight: normal;
+}
+
+.kontakt-formular .einverstanden input {
+  width: auto;
+  margin-right: 0.4rem;
+}
+
+.kontakt-formular .knopf {
+  margin-top: 1.25rem;
+}
+
+.meldung {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: var(--gray);
+  border-left: 4px solid var(--brown);
+}
+
+/* Impressum */
+
+.text-schmal h2 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.text-schmal h2:first-child {
+  margin-top: 0;
+}
+
+/* Footer */
+
+.fuss {
+  padding-top: 2.5rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.fuss-inhalt {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.fuss a {
+  color: var(--white);
+}
+
+.fuss li {
+  margin-bottom: 0.3rem;
+}
+
+.fuss-unten {
+  margin: 2rem 0 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--navy-blue);
+}
+
+/* Desktop */
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  .menu-knopf {
+    display: none;
+  }
+
+  .hauptnav {
+    display: block;
+    position: static;
+    background-color: transparent;
+    border-top: none;
+  }
+
+  .hauptnav ul {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .hauptnav a {
+    padding: 0.5rem 0.75rem;
+    border-bottom: none;
+  }
+
+  .hero {
+    padding: 6rem 0;
+  }
+
+  .seitentitel {
+    padding: 3.5rem 0;
+  }
+
+  .spalten {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .zwei-spalten {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .zwei-spalten img {
+    height: 340px;
+  }
+
+  .galerie {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .galerie img {
+    height: 200px;
+  }
+
+  .fuss-inhalt {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .theme-btn {
+    background: none;
+    background-color: var(--brown);
+    border: hidden;
+    color: var(--white);
+    padding: 4px 10px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}

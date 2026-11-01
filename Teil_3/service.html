@@ -1,9 +1,195 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service</title>
+    <meta
+      name="description"
+      content="Die Werkstatt der Garage Moser: Restauration, Service und Verkauf von Oldtimern in Bern."
+    />
+    <title>Werkstatt – Garage Moser</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="service.html" class="aktiv">Werkstatt</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="seitentitel">
+        <div class="behaelter">
+          <h1>Die Werkstatt</h1>
+          <p>
+            Hinter der Ausstellungshalle liegt unsere Werkstatt. Hier entstehen
+            und bleiben die Fahrzeuge, die Sie in der Halle sehen. Besucher
+            dürfen durch die Glasscheibe zuschauen.
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Was wir für Oldtimer tun</h2>
+          <div class="spalten">
+            <div class="box">
+              <h3>Restauration</h3>
+              <p>
+                Vom Rostschaden bis zum kompletten Neuaufbau: Wir bringen Ihren
+                Oldtimer zurück in den Originalzustand und dokumentieren jeden
+                Schritt mit Fotos.
+              </p>
+            </div>
+            <div class="box">
+              <h3>Service</h3>
+              <p>
+                Ölwechsel, Bremsen, Vergaser einstellen. Wir kennen die
+                typischen Schwachstellen alter Motoren und haben die passenden
+                Ersatzteile.
+              </p>
+            </div>
+            <div class="box">
+              <h3>Verkauf</h3>
+              <p>
+                Wir verkaufen geprüfte Fahrzeuge mit lückenloser Dokumentation,
+                auch auf Kommission. Aktuelle Angebote finden Sie in der
+                <a href="katalog.html">Ausstellung</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt grau">
+        <div class="behaelter zwei-spalten">
+          <img src="img/werkstatt.jpg" alt="Werkstatt" />
+          <div>
+            <h2>Handarbeit mit Geduld</h2>
+            <p>
+              Eine Restauration dauert bei uns zwischen drei Monaten und zwei
+              Jahren. Wir nehmen uns die Zeit, weil sich bei alten Autos hinter
+              jeder Schraube eine Überraschung verstecken kann.
+            </p>
+            <p>
+              Teile, die es nicht mehr zu kaufen gibt, fertigen wir wenn möglich
+              selbst an.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Preisliste Service</h2>
+          <p>
+            Der Stundenansatz beträgt CHF 140. Die Preise gelten ohne Material.
+          </p>
+          <div class="tabelle-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>Leistung</th>
+                  <th>Dauer</th>
+                  <th>Preis ab</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ölwechsel mit Filter</td>
+                  <td>1 Std.</td>
+                  <td>CHF 140</td>
+                </tr>
+                <tr>
+                  <td>Bremsen prüfen und einstellen</td>
+                  <td>2 Std.</td>
+                  <td>CHF 280</td>
+                </tr>
+                <tr>
+                  <td>Zündung und Elektrik prüfen</td>
+                  <td>2 Std.</td>
+                  <td>CHF 280</td>
+                </tr>
+                <tr>
+                  <td>Vergaser reinigen und einstellen</td>
+                  <td>3 Std.</td>
+                  <td>CHF 420</td>
+                </tr>
+                <tr>
+                  <td>Zustandsbericht vor dem Kauf</td>
+                  <td>3 Std.</td>
+                  <td>CHF 420</td>
+                </tr>
+                <tr>
+                  <td>Grosser Service</td>
+                  <td>1 Tag</td>
+                  <td>CHF 1'120</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt braun">
+        <div class="behaelter mitte">
+          <h2>Termin vereinbaren</h2>
+          <p>
+            Rufen Sie uns an oder schreiben Sie uns kurz, was an Ihrem Auto
+            gemacht werden soll.
+          </p>
+          <a href="kontakt.html" class="knopf hell">Zum Kontaktformular</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>

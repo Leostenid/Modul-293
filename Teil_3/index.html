@@ -1,10 +1,185 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
-    <link href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
+    <meta
+      name="description"
+      content="Oldtimer-Ausstellung mit Werkstatt in Bern: 30 Fahrzeuge aus den Jahren 1920 bis 1975."
+    />
+    <title>Garage Moser – Oldtimer-Ausstellung</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html" class="aktiv">Start</a></li>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="behaelter">
+          <div class="hero-text">
+            <h1>Die Oldtimer-Ausstellung in Bern</h1>
+            <p>
+              In unserer ehemaligen Garagenhalle stehen 30 Fahrzeuge aus den
+              Jahren 1920 bis 1975. Nebenan arbeitet die Werkstatt, und Sie
+              können ihr durch die Glasscheibe zusehen.
+            </p>
+            <a href="katalog.html" class="knopf">Ausstellung ansehen</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Ihr Besuch bei uns</h2>
+          <div class="spalten">
+            <div class="box">
+              <h3>Die Ausstellung</h3>
+              <p>
+                30 Fahrzeuge auf 600 Quadratmetern, von der Vorkriegslimousine
+                bis zum Sportwagen der Siebzigerjahre. Alle Autos sind
+                fahrbereit.
+              </p>
+              <a href="katalog.html">Zur Ausstellung</a>
+            </div>
+            <div class="box">
+              <h3>Führungen</h3>
+              <p>
+                Jeden Samstag um 14 Uhr zeigt Sandra Frei die Highlights und
+                erzählt, wie die Autos zu uns gekommen sind. Gruppen melden sich
+                vorher an.
+              </p>
+              <a href="kontakt.html">Führung anfragen</a>
+            </div>
+            <div class="box">
+              <h3>Die Werkstatt</h3>
+              <p>
+                Hinter der Halle restaurieren und warten wir Oldtimer. Einzelne
+                Fahrzeuge aus der Ausstellung sind auch verkäuflich.
+              </p>
+              <a href="service.html">Zur Werkstatt</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt grau">
+        <div class="behaelter zwei-spalten">
+          <img src="img/Garage.jpg" alt="Ein Porsche in der Werkstatt" />
+          <div>
+            <h2>Eine Ausstellung mit Werkstatt nebenan</h2>
+            <p>
+              Die Garage Moser wurde 1962 von Hans Moser gegründet. Im Lauf der
+              Jahre standen immer mehr alte Autos bei uns, und viele Kunden
+              wollten sie einfach nur anschauen. Deshalb haben wir 2008 die
+              Halle für Besucher geöffnet.
+            </p>
+            <p>
+              Heute führt sein Enkel Daniel den Betrieb. Die meisten Fahrzeuge
+              der Ausstellung haben wir selbst restauriert.
+            </p>
+            <a href="geschichte.html" class="knopf">Unsere Geschichte</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <h2>Zurzeit ausgestellt</h2>
+          <div class="spalten">
+            <article class="karte">
+              <img src="img/porsche.jpg" alt="Porsche 911" />
+              <div class="karte-text">
+                <h3>Porsche 911 Carrera RS</h3>
+                <p class="daten">Deutschland, 6 Zylinder, 260 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/mustang.jpg" alt="Ford Mustang" />
+              <div class="karte-text">
+                <h3>Ford Mustang Hardtop Coupe</h3>
+                <p class="daten">USA, 8 Zylinder, 200 PS</p>
+                <p class="etikett">Zu verkaufen</p>
+              </div>
+            </article>
+            <article class="karte">
+              <img src="img/mercedes.jpg" alt="Mercedes-Benz" />
+              <div class="karte-text">
+                <h3>Mercedes-Benz 230 SL</h3>
+                <p class="daten">Deutschland, 6 Zylinder, 150 PS</p>
+                <p class="etikett">Ausgestellt</p>
+              </div>
+            </article>
+          </div>
+          <p class="mitte">
+            <a href="katalog.html" class="knopf">Alle Exponate</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt braun">
+        <div class="behaelter mitte">
+          <h2>Besuch planen</h2>
+          <p>
+            Die Ausstellung ist von Dienstag bis Sonntag geöffnet. Der Eintritt
+            kostet CHF 14, Kinder bis 16 Jahre sind gratis.
+          </p>
+          <a href="kontakt.html" class="knopf hell">Anfahrt und Kontakt</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>

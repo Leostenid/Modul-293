@@ -1,9 +1,126 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galerie</title>
+    <meta
+      name="description"
+      content="Bilder aus der Ausstellung und der Werkstatt der Garage Moser in Bern."
+    />
+    <title>Galerie – Garage Moser</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="kopf">
+      <div class="behaelter kopf-inhalt">
+        <a href="index.html" class="logo">Garage Moser</a>
+
+        <button
+          class="menu-knopf"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnav"
+        >
+          Menü
+        </button>
+
+        <nav class="hauptnav" id="hauptnav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="galerie.html" class="aktiv">Galerie</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="theme-btn">Farbschema</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="seitentitel">
+        <div class="behaelter">
+          <h1>Galerie</h1>
+          <p>
+            Ein Blick in die Halle und in die Werkstatt. Klicken Sie auf ein
+            Bild, um es zu vergrössern.
+          </p>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <div class="behaelter">
+          <div class="galerie">
+            <button type="button">
+              <img
+                src="img/ausstellungshalle.jpg"
+                alt="Oldtimer in der Ausstellungshalle"
+              />
+            </button>
+            <button type="button">
+              <img src="img/felge.jpg" alt="Felge eines Oldtimers" />
+            </button>
+            <button type="button">
+              <img
+                src="img/Armaturenbrett.jpg"
+                alt="Armaturenbrett mit Rundinstrumenten"
+              />
+            </button>
+            <button type="button">
+              <img src="img/motorraum.jpg" alt="Motorraum eines Oldtimers" />
+            </button>
+            <button type="button">
+              <img
+                src="img/scheinwerfer.jpg"
+                alt="Scheinwerfer in Nahaufnahme"
+              />
+            </button>
+            <button type="button">
+              <img src="img/lenkrad.jpg" alt="Lenkrad eines Oldtimers" />
+            </button>
+            <button type="button">
+              <img src="img/heck.jpg" alt="Heck eines Oldtimers" />
+            </button>
+            <button type="button">
+              <img src="img/oldtimer.jpg" alt="Oldtimer vor der Werkstatt" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <dialog class="grossbild" id="grossbild">
+        <img src="" alt="" />
+        <button type="button" class="schliessen">Schliessen</button>
+      </dialog>
+    </main>
+
+    <footer class="fuss">
+      <div class="behaelter fuss-inhalt">
+        <div>
+          <h3>Garage Moser</h3>
+          <p>Musterstrasse 1<br />3000 Bern</p>
+          <p>031 123 45 67<br />info@garage-moser.example</p>
+        </div>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Ausstellung: Di–So, 10.00–17.00<br />Werkstatt: Mo–Fr, 8.00–12.00
+            und 13.30–17.30
+          </p>
+        </div>
+        <div>
+          <h3>Seiten</h3>
+          <ul>
+            <li><a href="katalog.html">Ausstellung</a></li>
+            <li><a href="service.html">Werkstatt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fuss-unten">© 2026 Garage Moser</p>
+    </footer>
+  </body>
 </html>
