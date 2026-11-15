@@ -1,6 +1,7 @@
 # Sensitive Apache configuration and credential files
 .htaccess
 .htpasswd
+.env
 
 # Microsoft Word and Excel documents
 *.docx
