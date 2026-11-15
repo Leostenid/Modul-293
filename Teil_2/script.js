@@ -1,5 +1,7 @@
 // Wurde Mit KI Gemacht
 
+const WEBHOOK_URL = ${{secrets.WEBHOOK_URL}};
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("nameInput");
