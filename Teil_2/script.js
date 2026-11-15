@@ -1,6 +1,7 @@
 // Wurde Mit KI Gemacht
-
-const WEBHOOK_URL = ${{secrets.WEBHOOK_URL}};
+// GitHub Actions secrets are not available in browser JavaScript.
+// Set your Discord webhook URL here.
+const WEBHOOK_URL = "PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
