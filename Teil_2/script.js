@@ -1,8 +1,5 @@
 // Wurde Mit KI Gemacht
 
-const WEBHOOK_URL =
-  "https://discord.com/api/webhooks/1555966823932108853/N794nFIUqEU16p5T3UeUTe-DLwjCuOHrEnEL7bKNal_ZRco1GBxhQXAF5S8Nu9f8egTS";
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("nameInput");
